@@ -11,5 +11,6 @@
 </head>
 
 <body>
+	<h1>Singles365</h1>
 </body>
 </html>
