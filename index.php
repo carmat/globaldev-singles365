@@ -12,5 +12,6 @@
 
 <body>
 	<h1>Singles365</h1>
+	<img src="assets/img/singels365.png">
 </body>
 </html>
