@@ -101,7 +101,7 @@
 					if ($member_photo_count !== 0) { ?>
 						<img class="member--profile-pic" src="<?=$member_photo_url;?>"><?php
 						if ($member_photo_count > 1){
-							?><div class="member--total-photos"><?=$member_photo_count?></div><?php
+							?><div class="member--total-photos ss-camera"><?=$member_photo_count?></div><?php
 						}
 					} ?>
 					<?php if ($member_photo_count == 0) { ?>
