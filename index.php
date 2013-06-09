@@ -65,8 +65,8 @@
 					<p><span id="members-count-number" class="members-count-number">31,000</span> members</p>
 				</div><!--
 			 --><div class="view-options">
-					<ul><li class="ss-icon">grid</li>
-						<li class="ss-icon">rows</li>
+					<ul><li class="ss-icon"><span id="view-grid" class="view-option active">grid</span></li><!--
+					 --><li class="ss-icon"><span id="view-rows" class="view-option">rows</span></li>
 					</ul>
 				</div><!--
 			 --><div class="view-sort">
@@ -83,7 +83,7 @@
 			$json_a = file_get_contents('assets/json/results.json');
 			$json_results = json_decode($json_a);
 
-			?><div class="search-results"><?php
+			?><div class="search-results view-grid" id="search-results"><?php
 
 			if ( count($json_results) > 0 ) {
 				foreach ($json_results->members as $member) {
@@ -92,6 +92,10 @@
 					$member_firstname = $member->first_name;
 					$member_age = $member->age;
 					$member_location = $member->region->shortname;
+					$member_profile = $member->profile;
+					$member_online_status = $member->online_status;
+					$member_interests = $member->interests;
+
 			?><article class="member">
 					<div class="member--photo"><?php
 					if ($member_photo_count !== 0) { ?>
@@ -102,11 +106,24 @@
 					} ?>
 					<?php if ($member_photo_count == 0) { ?>
 					<p class="no-photo">No photos available</p>
-					<?php } ?>
-					</div>
-					<div class="member--meta">
+				<?php }
+				?></div><!--
+				--><div class="member--meta">
 						<p><span class="member--name"><?=$member_firstname?></span>, <span class="member--age"><?=$member_age?></span></p>
 						<p><span class="member--location"><?=$member_location?></span></p>
+
+						<div class="member--meta--more">
+							<p class="member--profile"><?=$member_profile?></p>
+							<p class="member--interests"><span class="data-head">Interests:</span> <?php
+								$sep = '';
+								foreach ( $member_interests as $interest ) {
+									echo $sep.$interest;
+									$sep = ', ';
+								}
+							?></p>
+							<p class="member--online-status"><span class="data-head">Last online:</span> <?=$member_online_status?></p>
+							</ul>
+						</div>
 					</div>
 				</article><?php
 				}
@@ -117,5 +134,18 @@
 		</section>
 	</div>
 </div>
+
+<script type="text/javascript">
+document.getElementById('view-rows').onclick = function(){
+	this.className = this.className+"view-option active";
+	document.getElementById('view-grid').className = "view-option";
+	document.getElementById('search-results').className = "search-results view-rows";
+}
+document.getElementById('view-grid').onclick = function(){
+	this.className = this.className+"view-option active";
+	document.getElementById('view-rows').className = "view-option";
+	document.getElementById('search-results').className = "search-results view-grid";
+}
+</script>
 </body>
 </html>
