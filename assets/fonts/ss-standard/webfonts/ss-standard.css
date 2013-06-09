@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-standard.css" rel="stylesheet" />
+*/
+
+@font-face {
+  font-family: "SSStandard";
+  src: url('ss-standard.eot');
+  src: url('ss-standard.eot?#iefix') format('embedded-opentype'),
+       url('ss-standard.woff') format('woff'),
+       url('ss-standard.ttf')  format('truetype'),
+       url('ss-standard.svg#SSStandard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+html:hover [class^="ss-"]{-ms-zoom: 1;}
+
+.ss-icon, .ss-icon.ss-standard,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before{display:none;content:'';}
+
+/* @cursor */ .ss-cursor:before,.ss-cursor.right:after{content:''}
+/* @crosshair */ .ss-crosshair:before,.ss-crosshair.right:after{content:'⌖'}
+/* @search */ .ss-search:before,.ss-search.right:after{content:'🔎'}
+/* @zoomin */ .ss-zoomin:before,.ss-zoomin.right:after{content:''}
+/* @zoomout */ .ss-zoomout:before,.ss-zoomout.right:after{content:''}
+/* @view */ .ss-view:before,.ss-view.right:after{content:'👀'}
+/* @attach */ .ss-attach:before,.ss-attach.right:after{content:'📎'}
+/* @link */ .ss-link:before,.ss-link.right:after{content:'🔗'}
+/* @move */ .ss-move:before,.ss-move.right:after{content:''}
+/* @write */ .ss-write:before,.ss-write.right:after{content:'✎'}
+/* @writingdisabled */ .ss-writingdisabled:before,.ss-writingdisabled.right:after{content:''}
+/* @erase */ .ss-erase:before,.ss-erase.right:after{content:'✐'}
+/* @compose */ .ss-compose:before,.ss-compose.right:after{content:'📝'}
+/* @lock */ .ss-lock:before,.ss-lock.right:after{content:'🔒'}
+/* @unlock */ .ss-unlock:before,.ss-unlock.right:after{content:'🔓'}
+/* @key */ .ss-key:before,.ss-key.right:after{content:'🔑'}
+/* @backspace */ .ss-backspace:before,.ss-backspace.right:after{content:'⌫'}
+/* @ban */ .ss-ban:before,.ss-ban.right:after{content:'🚫'}
+/* @trash */ .ss-trash:before,.ss-trash.right:after{content:''}
+/* @target */ .ss-target:before,.ss-target.right:after{content:'◎'}
+/* @tag */ .ss-tag:before,.ss-tag.right:after{content:''}
+/* @bookmark */ .ss-bookmark:before,.ss-bookmark.right:after{content:'🔖'}
+/* @flag */ .ss-flag:before,.ss-flag.right:after{content:'⚑'}
+/* @like */ .ss-like:before,.ss-like.right:after{content:'👍'}
+/* @dislike */ .ss-dislike:before,.ss-dislike.right:after{content:'👎'}
+/* @heart */ .ss-heart:before,.ss-heart.right:after{content:'♥'}
+/* @halfheart */ .ss-halfheart:before,.ss-halfheart.right:after{content:''}
+/* @star */ .ss-star:before,.ss-star.right:after{content:'⋆'}
+/* @halfstar */ .ss-halfstar:before,.ss-halfstar.right:after{content:''}
+/* @sample */ .ss-sample:before,.ss-sample.right:after{content:''}
+/* @crop */ .ss-crop:before,.ss-crop.right:after{content:''}
+/* @layers */ .ss-layers:before,.ss-layers.right:after{content:''}
+/* @fill */ .ss-fill:before,.ss-fill.right:after{content:''}
+/* @stroke */ .ss-stroke:before,.ss-stroke.right:after{content:''}
+/* @phone */ .ss-phone:before,.ss-phone.right:after{content:'📞'}
+/* @phonedisabled */ .ss-phonedisabled:before,.ss-phonedisabled.right:after{content:''}
+/* @rss */ .ss-rss:before,.ss-rss.right:after{content:''}
+/* @facetime */ .ss-facetime:before,.ss-facetime.right:after{content:''}
+/* @reply */ .ss-reply:before,.ss-reply.right:after{content:'↩'}
+/* @send */ .ss-send:before,.ss-send.right:after{content:''}
+/* @mail */ .ss-mail:before,.ss-mail.right:after{content:'✉'}
+/* @inbox */ .ss-inbox:before,.ss-inbox.right:after{content:'📥'}
+/* @chat */ .ss-chat:before,.ss-chat.right:after{content:'💬'}
+/* @ellipsischat */ .ss-ellipsischat:before,.ss-ellipsischat.right:after{content:''}
+/* @ellipsis */ .ss-ellipsis:before,.ss-ellipsis.right:after{content:'…'}
+/* @user */ .ss-user:before,.ss-user.right:after{content:'👤'}
+/* @femaleuser */ .ss-femaleuser:before,.ss-femaleuser.right:after{content:'👧'}
+/* @users */ .ss-users:before,.ss-users.right:after{content:'👥'}
+/* @cart */ .ss-cart:before,.ss-cart.right:after{content:''}
+/* @creditcard */ .ss-creditcard:before,.ss-creditcard.right:after{content:'💳'}
+/* @dollarsign */ .ss-dollarsign:before,.ss-dollarsign.right:after{content:'💲'}
+/* @barchart */ .ss-barchart:before,.ss-barchart.right:after{content:'📊'}
+/* @piechart */ .ss-piechart:before,.ss-piechart.right:after{content:''}
+/* @box */ .ss-box:before,.ss-box.right:after{content:'📦'}
+/* @home */ .ss-home:before,.ss-home.right:after{content:'⌂'}
+/* @buildings */ .ss-buildings:before,.ss-buildings.right:after{content:'🏢'}
+/* @warehouse */ .ss-warehouse:before,.ss-warehouse.right:after{content:''}
+/* @globe */ .ss-globe:before,.ss-globe.right:after{content:'🌎'}
+/* @navigate */ .ss-navigate:before,.ss-navigate.right:after{content:''}
+/* @compass */ .ss-compass:before,.ss-compass.right:after{content:''}
+/* @signpost */ .ss-signpost:before,.ss-signpost.right:after{content:''}
+/* @map */ .ss-map:before,.ss-map.right:after{content:''}
+/* @location */ .ss-location:before,.ss-location.right:after{content:''}
+/* @pin */ .ss-pin:before,.ss-pin.right:after{content:'📍'}
+/* @database */ .ss-database:before,.ss-database.right:after{content:''}
+/* @hdd */ .ss-hdd:before,.ss-hdd.right:after{content:''}
+/* @music */ .ss-music:before,.ss-music.right:after{content:'♫'}
+/* @mic */ .ss-mic:before,.ss-mic.right:after{content:'🎤'}
+/* @volume */ .ss-volume:before,.ss-volume.right:after{content:'🔈'}
+/* @lowvolume */ .ss-lowvolume:before,.ss-lowvolume.right:after{content:'🔉'}
+/* @highvolume */ .ss-highvolume:before,.ss-highvolume.right:after{content:'🔊'}
+/* @airplay */ .ss-airplay:before,.ss-airplay.right:after{content:''}
+/* @camera */ .ss-camera:before,.ss-camera.right:after{content:'📷'}
+/* @picture */ .ss-picture:before,.ss-picture.right:after{content:'🌄'}
+/* @video */ .ss-video:before,.ss-video.right:after{content:'📹'}
+/* @play */ .ss-play:before,.ss-play.right:after{content:'▶'}
+/* @pause */ .ss-pause:before,.ss-pause.right:after{content:''}
+/* @stop */ .ss-stop:before,.ss-stop.right:after{content:'■'}
+/* @record */ .ss-record:before,.ss-record.right:after{content:'●'}
+/* @rewind */ .ss-rewind:before,.ss-rewind.right:after{content:'⏪'}
+/* @fastforward */ .ss-fastforward:before,.ss-fastforward.right:after{content:'⏩'}
+/* @skipback */ .ss-skipback:before,.ss-skipback.right:after{content:'⏮'}
+/* @skipforward */ .ss-skipforward:before,.ss-skipforward.right:after{content:'⏭'}
+/* @eject */ .ss-eject:before,.ss-eject.right:after{content:'⏏'}
+/* @repeat */ .ss-repeat:before,.ss-repeat.right:after{content:'🔁'}
+/* @replay */ .ss-replay:before,.ss-replay.right:after{content:'↺'}
+/* @shuffle */ .ss-shuffle:before,.ss-shuffle.right:after{content:'🔀'}
+/* @book */ .ss-book:before,.ss-book.right:after{content:'📕'}
+/* @openbook */ .ss-openbook:before,.ss-openbook.right:after{content:'📖'}
+/* @notebook */ .ss-notebook:before,.ss-notebook.right:after{content:'📓'}
+/* @newspaper */ .ss-newspaper:before,.ss-newspaper.right:after{content:'📰'}
+/* @grid */ .ss-grid:before,.ss-grid.right:after{content:''}
+/* @rows */ .ss-rows:before,.ss-rows.right:after{content:''}
+/* @columns */ .ss-columns:before,.ss-columns.right:after{content:''}
+/* @thumbnails */ .ss-thumbnails:before,.ss-thumbnails.right:after{content:''}
+/* @filter */ .ss-filter:before,.ss-filter.right:after{content:''}
+/* @desktop */ .ss-desktop:before,.ss-desktop.right:after{content:'💻'}
+/* @laptop */ .ss-laptop:before,.ss-laptop.right:after{content:''}
+/* @tablet */ .ss-tablet:before,.ss-tablet.right:after{content:''}
+/* @cell */ .ss-cell:before,.ss-cell.right:after{content:'📱'}
+/* @battery */ .ss-battery:before,.ss-battery.right:after{content:'🔋'}
+/* @highbattery */ .ss-highbattery:before,.ss-highbattery.right:after{content:''}
+/* @mediumbattery */ .ss-mediumbattery:before,.ss-mediumbattery.right:after{content:''}
+/* @lowbattery */ .ss-lowbattery:before,.ss-lowbattery.right:after{content:''}
+/* @emptybattery */ .ss-emptybattery:before,.ss-emptybattery.right:after{content:''}
+/* @lightbulb */ .ss-lightbulb:before,.ss-lightbulb.right:after{content:'💡'}
+/* @downloadcloud */ .ss-downloadcloud:before,.ss-downloadcloud.right:after{content:''}
+/* @download */ .ss-download:before,.ss-download.right:after{content:''}
+/* @uploadcloud */ .ss-uploadcloud:before,.ss-uploadcloud.right:after{content:''}
+/* @upload */ .ss-upload:before,.ss-upload.right:after{content:''}
+/* @fork */ .ss-fork:before,.ss-fork.right:after{content:''}
+/* @merge */ .ss-merge:before,.ss-merge.right:after{content:''}
+/* @transfer */ .ss-transfer:before,.ss-transfer.right:after{content:'⇆'}
+/* @refresh */ .ss-refresh:before,.ss-refresh.right:after{content:'↻'}
+/* @sync */ .ss-sync:before,.ss-sync.right:after{content:''}
+/* @loading */ .ss-loading:before,.ss-loading.right:after{content:''}
+/* @wifi */ .ss-wifi:before,.ss-wifi.right:after{content:''}
+/* @connection */ .ss-connection:before,.ss-connection.right:after{content:''}
+/* @file */ .ss-file:before,.ss-file.right:after{content:'📄'}
+/* @folder */ .ss-folder:before,.ss-folder.right:after{content:'📁'}
+/* @quote */ .ss-quote:before,.ss-quote.right:after{content:'“'}
+/* @text */ .ss-text:before,.ss-text.right:after{content:''}
+/* @font */ .ss-font:before,.ss-font.right:after{content:''}
+/* @print */ .ss-print:before,.ss-print.right:after{content:'⎙'}
+/* @fax */ .ss-fax:before,.ss-fax.right:after{content:'📠'}
+/* @list */ .ss-list:before,.ss-list.right:after{content:''}
+/* @layout */ .ss-layout:before,.ss-layout.right:after{content:''}
+/* @action */ .ss-action:before,.ss-action.right:after{content:''}
+/* @redirect */ .ss-redirect:before,.ss-redirect.right:after{content:'↪'}
+/* @expand */ .ss-expand:before,.ss-expand.right:after{content:'⤢'}
+/* @contract */ .ss-contract:before,.ss-contract.right:after{content:''}
+/* @help */ .ss-help:before,.ss-help.right:after{content:'❓'}
+/* @info */ .ss-info:before,.ss-info.right:after{content:'ℹ'}
+/* @alert */ .ss-alert:before,.ss-alert.right:after{content:'⚠'}
+/* @caution */ .ss-caution:before,.ss-caution.right:after{content:'⛔'}
+/* @logout */ .ss-logout:before,.ss-logout.right:after{content:''}
+/* @plus */ .ss-plus:before,.ss-plus.right:after{content:'+'}
+/* @hyphen */ .ss-hyphen:before,.ss-hyphen.right:after{content:'-'}
+/* @check */ .ss-check:before,.ss-check.right:after{content:'✓'}
+/* @delete */ .ss-delete:before,.ss-delete.right:after{content:'␡'}
+/* @settings */ .ss-settings:before,.ss-settings.right:after{content:'⚙'}
+/* @dashboard */ .ss-dashboard:before,.ss-dashboard.right:after{content:''}
+/* @notifications */ .ss-notifications:before,.ss-notifications.right:after{content:'🔔'}
+/* @notificationsdisabled */ .ss-notificationsdisabled:before,.ss-notificationsdisabled.right:after{content:'🔕'}
+/* @clock */ .ss-clock:before,.ss-clock.right:after{content:'⏲'}
+/* @stopwatch */ .ss-stopwatch:before,.ss-stopwatch.right:after{content:'⏱'}
+/* @calendar */ .ss-calendar:before,.ss-calendar.right:after{content:'📅'}
+/* @addcalendar */ .ss-addcalendar:before,.ss-addcalendar.right:after{content:''}
+/* @removecalendar */ .ss-removecalendar:before,.ss-removecalendar.right:after{content:''}
+/* @checkcalendar */ .ss-checkcalendar:before,.ss-checkcalendar.right:after{content:''}
+/* @deletecalendar */ .ss-deletecalendar:before,.ss-deletecalendar.right:after{content:''}
+/* @briefcase */ .ss-briefcase:before,.ss-briefcase.right:after{content:'💼'}
+/* @cloud */ .ss-cloud:before,.ss-cloud.right:after{content:'☁'}
+/* @droplet */ .ss-droplet:before,.ss-droplet.right:after{content:'💧'}
+/* @flask */ .ss-flask:before,.ss-flask.right:after{content:''}
+/* @up */ .ss-up:before,.ss-up.right:after{content:'⬆'}
+/* @upright */ .ss-upright:before,.ss-upright.right:after{content:'⬈'}
+/* @right */ .ss-right:before,.ss-right.right:after{content:'➡'}
+/* @downright */ .ss-downright:before,.ss-downright.right:after{content:'⬊'}
+/* @down */ .ss-down:before,.ss-down.right:after{content:'⬇'}
+/* @downleft */ .ss-downleft:before,.ss-downleft.right:after{content:'⬋'}
+/* @left */ .ss-left:before,.ss-left.right:after{content:'⬅'}
+/* @upleft */ .ss-upleft:before,.ss-upleft.right:after{content:'⬉'}
+/* @navigateup */ .ss-navigateup:before,.ss-navigateup.right:after{content:''}
+/* @navigateright */ .ss-navigateright:before,.ss-navigateright.right:after{content:'▻'}
+/* @navigatedown */ .ss-navigatedown:before,.ss-navigatedown.right:after{content:''}
+/* @navigateleft */ .ss-navigateleft:before,.ss-navigateleft.right:after{content:'◅'}
+/* @directup */ .ss-directup:before,.ss-directup.right:after{content:'▴'}
+/* @directright */ .ss-directright:before,.ss-directright.right:after{content:'▹'}
+/* @dropdown */ .ss-dropdown:before,.ss-dropdown.right:after{content:'▾'}
+/* @directleft */ .ss-directleft:before,.ss-directleft.right:after{content:'◃'}
+/* @retweet */ .ss-retweet:before,.ss-retweet.right:after{content:''}
+
+/* Legacy classes */
+/* @volumelow */ .ss-volumelow:before,.ss-volumelow.right:after{content:'🔉'}
+/* @volumehigh */ .ss-volumehigh:before,.ss-volumehigh.right:after{content:'🔊'}
+/* @batteryhigh */ .ss-batteryhigh:before,.ss-batteryhigh.right:after{content:''}
+/* @batterymedium */ .ss-batterymedium:before,.ss-batterymedium.right:after{content:''}
+/* @batterylow */ .ss-batterylow:before,.ss-batterylow.right:after{content:''}
+/* @batteryempty */ .ss-batteryempty:before,.ss-batteryempty.right:after{content:''}
+/* @clouddownload */ .ss-clouddownload:before,.ss-clouddownload.right:after{content:''}
+/* @cloudupload */ .ss-cloudupload:before,.ss-cloudupload.right:after{content:''}
+/* @calendaradd */ .ss-calendaradd:before,.ss-calendaradd.right:after{content:''}
+/* @calendarremove */ .ss-calendarremove:before,.ss-calendarremove.right:after{content:''}
+/* @calendarcheck */ .ss-calendarcheck:before,.ss-calendarcheck.right:after{content:''}
+/* @calendardelete */ .ss-calendardelete:before,.ss-calendardelete.right:after{content:''}
