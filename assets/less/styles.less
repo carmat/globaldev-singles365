@@ -1,6 +1,5 @@
 @import 'mixins';
 /* Template Constants
- * font-size: 16px == 1em;
  * 
  * |===================== COLOR PALETTE ====================|
  *  - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -13,16 +12,23 @@
  * |	Headings / Body	|	'Lucida Grande', 'Arial Unicode MS', sans-serif;	|
  */
 
+/**
+ * A quick reference point for colors most used throughout this stylesheet
+ */
 // Colors
 @charcoal: rgba(68,67,64,1);
 @blue: rgba(42,190,193,1);
 @red: rgba(240,85,92,1);
 
+/**
+ * A quick reference point for font most used throughout this prototype
+ */
 // Fontstacks
 @lucida: 'Lucida Grande', 'Arial Unicode MS', sans-serif;
 
 * { outline: none; }
 
+// Setting base styles for all body text and form elements
 body, input, textarea, select {
 	font-family: @lucida;
 	color: @charcoal;
@@ -39,10 +45,13 @@ body, input, textarea, select {
 
 .site-logo { text-align: center; }
 
+/**
+ * Mobile-friendly menu technique
+ */
 .opener { display: none; }
-
 nav.top-nav {
 	font-size: 0.75em;
+	line-height: 1.3333333333333333em; // browser fallback for calc()
 	line-height: calc(4/3 * 1em);
 	text-align: center;
 	font-weight: bold;
@@ -81,6 +90,7 @@ nav.top-nav {
 	}
 
 	.view-options {
+	// These options are translated into the Symbol font mentioned in index.php
 		display: none;
 		ul {
 			margin: 0 auto;
@@ -156,13 +166,11 @@ a { text-decoration: none; }
 			font-weight: bold;
 		}
 	}
-
-	.no-photo { padding: 0.5em; }
-
 	.member--profile-pic,.no-photo {
 		width: 100%;
 		.border-radius(0.5em 0.5em 0 0);
 	}
+	.no-photo { padding: 0.5em; }
 
 	.member--meta { padding: 0.5em; }
 	.member--meta--more { display: none; }
@@ -183,6 +191,9 @@ a { text-decoration: none; }
 /**
  * Media Queries
  * 
+ * Theses media queries cover article.member grid layout resonsivity, 
+ * top-nav mobile-friendly navigation using CSS :target method, 
+ * alternate member view options between grid-view and rows-view
  * 
  */
 @media (max-width: 480px) {
@@ -216,7 +227,6 @@ a { text-decoration: none; }
 		.view-sort { text-align: right; }
 		.view-options { display: inline-block; }
 	}
-	.search-results.view-grid {}
 	.search-results.view-rows {
 		.member {
 			display: block;
@@ -247,6 +257,7 @@ a { text-decoration: none; }
 @media (min-width: 360px) and (max-width: 479px) {
 	.content-main article {
 		display: inline-block;
+		width: 42.77777777777778%; // browser fallback for calc()
 		width: calc(154/360 * 100%);
 		margin-right: 1em;
 		&:nth-of-type(even) { margin-right: 0; }
@@ -287,6 +298,7 @@ a { text-decoration: none; }
 @media (min-width: 480px) and (max-width: 639px) {
 	.content-main article {
 		display: inline-block;
+		width: 28.541666666666664%; // browser fallback for calc()
 		width: calc(137/480 * 100%);
 		margin-right: 1em;
 		&:nth-of-type(even) { margin-right: 1em; }
@@ -297,6 +309,7 @@ a { text-decoration: none; }
 @media (min-width: 640px) and (max-width: 819px) {
 	.content-main article {
 		display: inline-block;
+		width: 21.796875%; // browser fallback for calc()
 		width: calc(279/1280 * 100%);
 		margin-right: 1em;
 		&:nth-of-type(even) { margin-right: 1em; }
@@ -308,6 +321,7 @@ a { text-decoration: none; }
 @media (min-width: 820px) and (max-width: 899px) {
 	.content-main article {
 		display: inline-block;
+		width: 22.317073170731707%; // browser fallback for calc()
 		width: calc(183/820 * 100%);
 		margin-right: 1em;
 		&:nth-of-type(even) { margin-right: 1em; }
@@ -320,6 +334,7 @@ a { text-decoration: none; }
 	.content-main {
 		article {
 			display: inline-block;
+			width: 18.45102505694761%; // browser fallback for calc()
 			width: calc(162/878 * 100%);
 			margin-right: 1em;
 			&:nth-of-type(even) { margin-right: 1em; }
